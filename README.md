@@ -10,18 +10,18 @@
 
 ### (1) &gt; 1200px
 
-![Greater than 1200px](image/greaterThan1200px.png)
+![Greater than 1200px](./week-1/image/greaterThan1200px.png)
 
 ### (2) &gt; 800px and &lt; 1200px
 
-![Greater than 800px and less than 1200px](image/greaterThan800px.png)
+![Greater than 800px and less than 1200px](./week-1/image/greaterThan800px.png)
 
 ### (3) &gt; 500px and &lt; 800px
 
-![Greater than 500px and less than 800px](image/greaterThan500px.png)
+![Greater than 500px and less than 800px](./week-1/image/greaterThan500px.png)
 
 ### (4) &lt; 500px
 
-![Less Than 500px](./image/lessThan500px.png)
+![Less Than 500px](./week-1/image/lessThan500px.png)
 
 ### Mobile-first design pattern to perform this assignment
