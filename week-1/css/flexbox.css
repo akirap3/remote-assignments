@@ -21,11 +21,6 @@ main,
   flex: 1;
 }
 
-.heading ul,
-.heading img {
-  align-content: end;
-}
-
 .welcome-message,
 .section-title {
   justify-content: center;
