@@ -16,8 +16,14 @@ main,
   align-self: center;
 }
 
-.heading {
-  justify-content: space-between;
+.heading p {
+  justify-self: flex-start;
+  flex: 1;
+}
+
+.heading ul,
+.heading img {
+  align-content: end;
 }
 
 .welcome-message,
@@ -46,9 +52,16 @@ main,
     flex: 1 40%;
     height: 18vh;
   }
+  .heading {
+    margin: auto 1.2em;
+  }
 }
 
 @media (min-width: 800px) {
+  ul.nav-items {
+    display: flex;
+    flex-direction: row;
+  }
   .content-section {
     width: 90%;
   }
