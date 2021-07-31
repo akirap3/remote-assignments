@@ -76,6 +76,18 @@ main {
   align-items: center;
 }
 
+/* for cards-group */
+.cards-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.card {
+  flex: 1;
+}
+
 /* for media query */
 @media (min-width: 360px) {
   .logo {
@@ -116,6 +128,17 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 8vw;
+  }
+
+  .cards-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .card:first-child {
+    margin-right: 50px;
   }
 }
 
