@@ -1,0 +1,149 @@
+/* for all */
+.wrapper-all,
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* for navigator */
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading-group-1,
+.heading-group-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  justify-self: flex-start;
+}
+
+/* ------- for main ---------- */
+
+/* for  banner*/
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* for landing */
+.landing {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.landing-group-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* for skill-set */
+
+.skill-set {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+/* if using flexbox, but can't match expectation */
+/* .skill-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+} */
+
+.skill-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 15vw;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* for media query */
+@media (min-width: 360px) {
+  .logo {
+    width: 300px;
+    margin: 6px 0;
+  }
+
+  .skill-group {
+    grid-column-gap: 20vw;
+  }
+}
+
+@media (min-width: 510px) {
+}
+
+@media (min-width: 540px) {
+  .banner {
+    min-height: 3vh;
+  }
+  .landing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 2em 3em 7em 3em;
+  }
+  .landing-group-1 {
+    order: 1;
+    width: 50vw;
+    height: auto;
+    align-self: center;
+  }
+  .landing-group-2 {
+    width: 50vw;
+    justify-content: center;
+    margin-right: 3em;
+  }
+  .skill-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 8vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .nav-lang-selector {
+    display: inline;
+  }
+
+  .skill-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 18vw;
+  }
+}
+
+@media (min-width: 840px) {
+  .nav-options-group,
+  .nav-option {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+  }
+
+  .nav-options-group ul li:first-child,
+  .nav-options-group ul li:last-child {
+    display: inline;
+  }
+}
+
+@media (min-width: 1025px) {
+}
