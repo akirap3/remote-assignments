@@ -109,6 +109,14 @@ main {
   align-items: center;
 }
 
+/* for find-google-expert section */
+.find-google-expert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* for media query */
 @media (min-width: 360px) {
   .logo {

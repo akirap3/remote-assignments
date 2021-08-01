@@ -296,7 +296,40 @@ a:hover {
   background-color: rgba(219, 231, 243, 0.5);
 }
 
-/* for news */
+/* for find-google-expert section */
+.find-google-expert {
+  padding: 0 2vw;
+}
+.find-google-expert h2 {
+  font-family: "Google Sans";
+  text-align: center;
+  font-size: 1.4em;
+  margin: 1em;
+}
+
+.find-google-expert p {
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.find-google-expert button {
+  color: rgb(26, 115, 232);
+  font-family: "Google Sans";
+  font-size: 14px;
+  font-weight: 300;
+  background-color: white;
+  width: 200px;
+  height: 36px;
+  border-radius: 4px;
+  margin: 0.5em auto 2em auto;
+  border: 1px solid rgb(189, 190, 194);
+}
+
+.find-google-expert button:hover {
+  background-color: rgba(161, 189, 243, 0.2);
+}
 
 /* -------- for media query ------- */
 
@@ -355,6 +388,10 @@ a:hover {
     height: 40%;
     color: rgb(26, 115, 232);
     background-color: white;
+  }
+
+  .find-google-expert p {
+    width: 700px;
   }
 }
 
