@@ -25,3 +25,5 @@
 ![Less Than 500px](./week-1/image/lessThan500px.png)
 
 ### Mobile-first design pattern to perform this assignment
+
+## [2. Remote Assignments Week-1-Advanced link(emitating Google Developers Page)](https://akirap3.github.io/remote-assignments/week-1-advanced/index.html)
