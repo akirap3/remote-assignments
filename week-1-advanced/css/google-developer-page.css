@@ -331,6 +331,70 @@ a:hover {
   background-color: rgba(161, 189, 243, 0.2);
 }
 
+/* for experts section */
+
+.experts-section {
+  width: 80vw;
+  margin: 0 10vw;
+}
+
+.expert-card {
+  width: 100%;
+  border: 1px solid rgb(222, 224, 230);
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto 3vh auto;
+}
+
+.expert-card figure {
+  width: 100%;
+  height: 33%;
+  margin: 1.5em auto;
+}
+
+.expert-image img {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.expert-details {
+  margin-bottom: 2.5em;
+}
+
+.expert-details h3 {
+  font-size: 20px;
+  font-weight: 500px;
+  margin-bottom: 0.8em;
+}
+
+.expert-details p:nth-child(2) {
+  font-size: 15px;
+}
+
+.expert-details p:nth-child(3) {
+  margin: 1.6em;
+}
+
+.expert-details p:nth-child(3) span {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.expert-details p:nth-child(3) span:nth-child(3) {
+  color: rgb(148, 148, 148);
+}
+
+.expert-details a {
+  color: rgb(62, 137, 236);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.expert-details a:hover {
+  background-color: rgba(219, 231, 243, 0.5);
+}
+
 /* -------- for media query ------- */
 
 @media (min-width: 510px) {
@@ -354,6 +418,16 @@ a:hover {
   .card-content button,
   .card-content a {
     font-size: 14px;
+  }
+}
+
+@media (min-width: 460px) {
+  .experts-section {
+    width: 90vw;
+    margin: 0 5vw;
+  }
+  .expert-image img {
+    width: 85px;
   }
 }
 
@@ -414,6 +488,9 @@ a:hover {
   }
 }
 
+@media (min-width: 925px) {
+}
+
 @media (min-width: 1025px) {
   .events-card figure::before,
   .community-card figure::before {
@@ -425,5 +502,12 @@ a:hover {
 
   .news-card figure {
     height: 25%;
+  }
+}
+
+@media (min-width: 1360px) {
+  .experts-section {
+    width: 1224px;
+    margin: 0 calc(100% / 2 - 1224px / 2);
   }
 }

@@ -117,6 +117,27 @@ main {
   align-items: center;
 }
 
+/* for experts-secgtion */
+.experts-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.expert-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expert-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 /* for media query */
 @media (min-width: 360px) {
   .logo {
@@ -126,6 +147,14 @@ main {
 
   .skill-group {
     grid-column-gap: 20vw;
+  }
+}
+
+@media (min-width: 460px) {
+  .experts-section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 4vw;
   }
 }
 
@@ -205,5 +234,16 @@ main {
   }
 }
 
+@media (min-width: 925px) {
+  .experts-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2vw;
+  }
+}
+
 @media (min-width: 1025px) {
+}
+
+@media (min-width: 1360px) {
 }
