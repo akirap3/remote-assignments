@@ -1,0 +1,94 @@
+/* ---- for flexbox ---- */
+
+.container,
+main,
+.welcome-message,
+.section-title,
+.content-section,
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* for floating menu */
+.menuDiv {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* for navigator */
+.heading,
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+.heading p {
+  justify-self: flex-start;
+  flex: 1;
+}
+
+.welcome-message,
+.section-title {
+  justify-content: center;
+  align-items: center;
+}
+
+/* for content section */
+.content h3 {
+  align-self: center;
+}
+
+.call-to-action {
+  align-self: center;
+}
+
+/* for media query */
+
+@media (min-width: 500px) {
+  .content-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
+    width: 95%;
+  }
+  .content {
+    flex: 1 40%;
+    height: 18vh;
+  }
+  .heading {
+    margin: auto 1.2em;
+  }
+}
+
+@media (min-width: 800px) {
+  ul.nav-items {
+    display: flex;
+    flex-direction: row;
+  }
+  .content-section {
+    width: 90%;
+  }
+  .content {
+    max-width: 50%;
+    height: 20vh;
+  }
+  .heading {
+    margin: auto 2em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-section {
+    max-width: 1200px;
+  }
+  .content {
+    max-width: 50%;
+    height: 25vh;
+  }
+}
