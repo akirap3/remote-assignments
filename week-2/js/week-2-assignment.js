@@ -5,7 +5,7 @@ welcomeMessage.addEventListener("click", () => {
   welcomeMessage.textContent = "Have a Good Time!";
 });
 
-// Assignment 5 - Request 2: Floating Menu
+// Assignment 4 - Request 2: Floating Menu
 const menuIcon = document.querySelector(".heading img");
 
 const floatingMenu = document.querySelector(".floating-menu");
@@ -36,4 +36,20 @@ menuIcon.addEventListener("click", () => {
   menuExit.addEventListener("click", () => {
     parent.removeChild(menuDiv);
   });
+});
+
+// Assignment 4 - Request 3: Click to show mor content boxes
+
+const callToAction = document.querySelector(".call-to-action");
+
+const toggleContent = document.getElementsByClassName("toggle")[0];
+
+callToAction.addEventListener("click", (event) => {
+  if (event.target.textContent === "Call to Action") {
+    event.target.textContent = "Show Content";
+    toggleContent.style.display = "none";
+  } else {
+    toggleContent.style.display = "flex";
+    event.target.textContent = "Call to Action";
+  }
 });

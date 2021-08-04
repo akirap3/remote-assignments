@@ -90,6 +90,7 @@ ul.nav-items {
 
 .content-section {
   font-size: 0.5em;
+  display: none;
 }
 
 .content {
