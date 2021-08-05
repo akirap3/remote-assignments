@@ -1,29 +1,31 @@
 # Remote Assignments
 
----
-
 ## [1. Remote Assignments Week 1 link](https://akirap3.github.io/remote-assignments/week-1/index.html)
 
-### Creating a repository and using GitHub Pages
+- Creating a repository and using GitHub Pages
+- Pure HTML/CSS and the Layouts of
+  - &gt; 1200px
+  - &gt; 800px and &lt; 1200px
+  - &gt; 500px and &lt; 800px
+  - &lt; 500px
+- Mobile-first design pattern to perform this assignment
 
-### Pure HTML/CSS and the Layouts of
+## [2. Remote Assignments Week-1-Advanced link](https://akirap3.github.io/remote-assignments/week-1-advanced/index.html)
 
-### (1) &gt; 1200px
+- Description: emitating [Google Developers Page](https://developers.google.com/)
 
-![Greater than 1200px](./week-1/image/greaterThan1200px.png)
+## [3. Remote Assignments Week-2 link](https://akirap3.github.io/remote-assignments/week-2/index.html)
 
-### (2) &gt; 800px and &lt; 1200px
+- Click on "Welcome Message" block, and it will change the text to "Have a Good Time!"
+- Design a floating menu
+- Click the "Call to Action" button, and it will hide the contet below it. Click "Show Content" will toggle back
 
-![Greater than 800px and less than 1200px](./week-1/image/greaterThan800px.png)
+## [4. Remote Assignments Week-2 for JS code on Replit](https://replit.com/join/ueddfjooir-peterfan)
 
-### (3) &gt; 500px and &lt; 800px
-
-![Greater than 500px and less than 800px](./week-1/image/greaterThan500px.png)
-
-### (4) &lt; 500px
-
-![Less Than 500px](./week-1/image/lessThan500px.png)
-
-### Mobile-first design pattern to perform this assignment
-
-## [2. Remote Assignments Week-1-Advanced link(emitating Google Developers Page)](https://akirap3.github.io/remote-assignments/week-1-advanced/index.html)
+- Complete max number function without using built-in methods
+- Try two ways to create a proper object as a parameter of calculate function
+- To calculate the average price of all the products
+- Given an array of integers,
+  return indices of the two numbers such that they add up to a specific target.
+  You may assume that each input would have exactly one solution,
+  and you may not use the same element twice.
