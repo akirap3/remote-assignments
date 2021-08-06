@@ -34,7 +34,10 @@ menuIcon.addEventListener("click", () => {
   const parent = menuDiv.parentNode;
 
   menuExit.addEventListener("click", () => {
-    parent.removeChild(menuDiv);
+    menuDiv.classList.add("slideOut");
+    setTimeout(() => {
+      parent.removeChild(menuDiv);
+    }, 5000);
   });
 });
 

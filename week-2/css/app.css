@@ -57,6 +57,24 @@ ul.nav-items {
 }
 
 /* for floating menu */
+@keyframes slideIn {
+  0% {
+    margin-left: 100vw;
+  }
+  100% {
+    margin-left: 50vw;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    margin-left: 50vw;
+  }
+  100% {
+    margin-left: 100vw;
+  }
+}
+
 .menuDiv {
   background-color: rgb(176, 196, 222, 0.7);
   position: absolute;
@@ -65,6 +83,13 @@ ul.nav-items {
   margin-left: 50vw;
   z-index: 5;
   border-radius: 5px;
+  animation-name: slideIn;
+  animation-duration: 3s;
+}
+
+.slideOut {
+  animation-name: slideOut;
+  animation-duration: 3s;
 }
 
 .menu-exit {
