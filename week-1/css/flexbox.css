@@ -67,6 +67,9 @@ main,
   .heading {
     margin: auto 2em;
   }
+  .heading img {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
