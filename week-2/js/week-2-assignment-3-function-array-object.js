@@ -1,7 +1,7 @@
 // To calculate the average price of all the products
 function avg(data) {
   let sum = 0;
-  let { products } = data;
+  const { products } = data;
   for (let i = 0; i < products.length; i++) {
     sum += products[i]["price"];
   }

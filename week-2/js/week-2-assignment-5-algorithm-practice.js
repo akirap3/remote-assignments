@@ -4,7 +4,7 @@
   and you may not use the same element twice. 
 */
 function twoSum(nums, target) {
-  let temp = [];
+  const temp = [];
   // extract indices
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] <= target) {
@@ -12,7 +12,7 @@ function twoSum(nums, target) {
     }
   }
   // extract the two indices and push to resultIndex array
-  let resultIndex = [];
+  const resultIndex = [];
   for (index of temp) {
     for (let j = 1; j < temp.length; j++) {
       if (nums[index] + nums[temp[j]] === target) {
