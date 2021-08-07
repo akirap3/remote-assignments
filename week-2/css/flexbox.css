@@ -11,12 +11,16 @@ main,
 }
 
 /* for floating menu */
-.menuDiv {
+#menuDiv {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-start;
 }
+
+/* #menuUl {
+  flex: 1;
+} */
 
 /* for navigator */
 .heading,

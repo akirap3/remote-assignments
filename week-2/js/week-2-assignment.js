@@ -8,37 +8,15 @@ welcomeMessage.addEventListener("click", () => {
 // Assignment 4 - Request 2: Floating Menu
 const menuIcon = document.querySelector(".heading img");
 
-const floatingMenu = document.querySelector(".floating-menu");
+const floatingMenu = document.getElementById("floating-menu");
+const menuExit = document.getElementById("menu-exit");
 
 menuIcon.addEventListener("click", () => {
-  const menuDiv = document.createElement("div");
-  menuDiv.className = "menuDiv";
+  floatingMenu.style.width = "50vw";
+});
 
-  const menuExit = document.createElement("img");
-  menuExit.src = "image/crossIcon.svg";
-  menuExit.className = "menu-exit";
-
-  const menuUl = document.createElement("ul");
-  menuUl.className = "menuUl";
-
-  for (let i = 1; i <= 4; i++) {
-    const item = document.createElement("li");
-    item.textContent = `Item ${i}`;
-    item.style.listStyle = "none";
-    menuUl.appendChild(item);
-  }
-
-  menuDiv.appendChild(menuExit);
-  menuDiv.appendChild(menuUl);
-  floatingMenu.appendChild(menuDiv);
-  const parent = menuDiv.parentNode;
-
-  menuExit.addEventListener("click", () => {
-    menuDiv.classList.add("slideOut");
-    setTimeout(() => {
-      parent.removeChild(menuDiv);
-    }, 5000);
-  });
+menuExit.addEventListener("click", () => {
+  floatingMenu.style.width = "0";
 });
 
 // Assignment 4 - Request 3: Click to show mor content boxes

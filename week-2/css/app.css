@@ -57,52 +57,32 @@ ul.nav-items {
 }
 
 /* for floating menu */
-@keyframes slideIn {
-  0% {
-    margin-left: 100vw;
-  }
-  100% {
-    margin-left: 50vw;
-  }
-}
 
-@keyframes slideOut {
-  0% {
-    margin-left: 50vw;
-  }
-  100% {
-    margin-left: 100vw;
-  }
-}
-
-.menuDiv {
-  background-color: rgb(176, 196, 222, 0.7);
+#floating-menu {
+  height: 100%;
+  width: 0;
   position: absolute;
-  width: 50vw;
-  height: 100vh;
-  margin-left: 50vw;
-  z-index: 5;
-  border-radius: 5px;
-  animation-name: slideIn;
-  animation-duration: 3s;
+  z-index: 1;
+  right: 0;
+  background-color: rgb(176, 196, 222, 0.7);
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-radius: 8px;
 }
 
-.slideOut {
-  animation-name: slideOut;
-  animation-duration: 3s;
-}
-
-.menu-exit {
+#menu-exit {
   width: 25px;
   margin: 10px 30px;
 }
 
-.menuUl {
+#menuUl {
   margin-top: 10px;
 }
 
-.menuUl li {
+#menuUl li {
   margin-bottom: 2.5vh;
+  list-style: none;
+  transition: 0.3s;
 }
 
 /* for title section */
