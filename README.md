@@ -10,6 +10,8 @@
   - &lt; 500px
 - Mobile-first design pattern to perform this assignment
 
+## [1-1. Remote Assignments Week 1 - Practice Search Bar Design](https://akirap3.github.io/remote-assignments/week-1-practice-search-bar-design/index.html)
+
 ## [2. Remote Assignments Week-1-Advanced link](https://akirap3.github.io/remote-assignments/week-1-advanced/index.html)
 
 - Description: emitating [Google Developers Page](https://developers.google.com/)
