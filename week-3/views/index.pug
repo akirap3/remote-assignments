@@ -1,0 +1,7 @@
+extends layout
+
+block content 
+    h1 Welcome to Triangular number Calculation!
+    form(action="/trackName", method='post')
+        input(type='text', name='username', placeholder="Please enter your first name")
+        button(type='submit') Submit
