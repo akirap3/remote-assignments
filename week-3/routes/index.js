@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
   if (username) {
     res.render("trackName", { username });
   } else {
-    res.render("index", { username });
+    res.render("index");
   }
 });
 
@@ -14,7 +14,9 @@ router.get("/:name", (req, res) => {
   const username = req.cookies.username;
   const queryname = req.params.name;
 
-  if (queryname === username) {
+  if (!username) {
+    res.render("index");
+  } else if (queryname === username) {
     res.render("trackName", { username });
   } else {
     res.render("trackName", { queryname, username });
