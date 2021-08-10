@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
   if (username) {
     res.render("trackName", { username });
   } else {
-    res.render("index");
+    res.render("index", { username });
   }
 });
 
