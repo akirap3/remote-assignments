@@ -5,7 +5,6 @@ const xhr = new XMLHttpRequest();
 xhr.responseType = "json";
 xhr.onreadystatechange = () => {
   if (xhr.readyState === 4 && xhr.status === 200) {
-    console.log(xhr.response.message);
     let resultNumber = xhr.response.message;
     const resultArea = document.querySelectorAll(".hidden")[0];
     const backButton = document.querySelectorAll(".hidden")[1];

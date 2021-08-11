@@ -18,7 +18,6 @@ router.get("/", (req, res, next) => {
       for (let i = 1; i <= number; i++) {
         result += i;
       }
-      console.log(result);
       res.json({ message: result });
     }
   } else {
