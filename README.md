@@ -31,3 +31,24 @@
   return indices of the two numbers such that they add up to a specific target.
   You may assume that each input would have exactly one solution,
   and you may not use the same element twice.
+
+## [5. Remote Assignments Week-3](https://github.com/akirap3/remote-assignments/tree/master/week-3)
+
+- Need to download this folder and perform with node.js (make sure to install node.js on you desktop/notebook beforehand)
+  ```
+    cd week-3
+    npm install
+    node app.js
+  ```
+- Creating API with Express.js and rendering template (.pug)
+  - http://localhost:3000/ => home page indicating entering username
+  - http://localhost:3000/getData => showing "Lack of Parameter" (by rendering)
+  - http://localhost:3000/getData?number=xyz => showing "Wrong Parameter" (by rendering)
+  - http://localhost:3000/getData?number=5 => showing 15 (the result of 1+2+3+4+5) (by rendering)
+  - http://localhost:3000/getNumber => showing "Lack of Parameter" (responding with JSON)
+  - http://localhost:3000/getNumber?number=xyz => showing "Wrong Parameter" (responding with JSON)
+  - http://localhost:3000/getNumber?number=5 => showing 15 (the result of 1+2+3+4+5) (responding with JSON)
+  - http://localhost:3000/sum.html => static page to request entering a number which will response the sum of a [triangular number](https://en.wikipedia.org/wiki/Triangular_number)
+  - http://localhost:3000/getData?number=10 => showing 55
+  - http://localhost:3000/peter => there is cookie stored, if you login. And will check with cookie and showing message
+  - http://localhost:3000/trackName?name=peter => redirect to /peter
