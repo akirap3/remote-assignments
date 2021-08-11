@@ -5,6 +5,7 @@ const path = require("path");
 const router = express.Router();
 const indexRoutes = require("./routes");
 const getDataRoutes = require("./routes/getData");
+const getNumberRoutes = require("./routes/getNumber");
 const trackNameRoutes = require("./routes/trackName");
 const app = express();
 const port = 3000;
@@ -19,6 +20,7 @@ app.use("/", express.static("public"));
 
 // if there is route mismatch, please adjusty the sequence of routes
 app.use(router);
+app.use("/getNumber", getNumberRoutes);
 app.use("/getData", getDataRoutes);
 app.use("/trackName", trackNameRoutes);
 app.use("/", indexRoutes);
