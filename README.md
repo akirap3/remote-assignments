@@ -52,3 +52,22 @@
   - http://localhost:3000/getData?number=10 => showing 55
   - http://localhost:3000/peter => there is cookie stored, if you login. And will check with cookie and showing message
   - http://localhost:3000/trackName?name=peter => redirect to /peter
+
+## [6. Remote Week-4 Assignment-1](https://akirap3.github.io/remote-assignments/week-4/assignment-1/index.html)
+
+- Writing `delayedResult(n1, n2, delayTime, callback)` fucntion to show the sum of n1 and n2 after delayTime
+- You could check the result of `delayedResult(4,5,3000 callback)` on console and alert message
+- In addition, try by yourself on the brower console
+
+## [7. Remote Week-4 Assignment-2-1](https://akirap3.github.io/remote-assignments/week-4/assignment-2/index.html)
+
+- Using AJAX to fetch JSON data and dispaly on the screen
+- Design utilizing Boostrap, particle.js and some customized CSS
+
+## [8. Remote Week-4 Assignment-2-2](https://akirap3.github.io/remote-assignments/week-4/assignment-2/with-string-method.html)
+
+- Adding some Photos and redering the cards by using string literals
+
+## [9. Remote Week-4 Assignment-3](https://akirap3.github.io/remote-assignments/week-4/assignment-3/refactoring-with-react.html)
+
+- Refactoring the web page of Week-1 and Week-2 via React
