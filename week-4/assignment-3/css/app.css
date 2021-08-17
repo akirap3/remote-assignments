@@ -1,0 +1,121 @@
+/* ---- Basic layout ------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  min-width: 250px;
+}
+
+/* for navigator */
+
+.nav-items li {
+  list-style: none;
+}
+
+header {
+  background-color: #eeeeee;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.heading {
+  margin: auto 0.9em;
+}
+
+.heading p {
+  padding: 10px 0px 8px 0px;
+}
+
+.heading p,
+ul {
+  margin: 0;
+  font-size: 0.95em;
+}
+
+ul li {
+  margin-right: 2em;
+}
+
+ul.nav-items {
+  padding: 10px 0px 8px 10px;
+  display: none;
+}
+
+.welcome-message {
+  background-color: rgb(204, 221, 238);
+  width: 100%;
+  text-align: center;
+  height: 20vh;
+  margin: auto;
+  font-size: 0.95em;
+}
+
+/* for floating menu */
+
+#floating-menu {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  background-color: rgb(176, 196, 222, 0.7);
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-radius: 8px;
+}
+
+#menu-exit {
+  width: 25px;
+  margin: 10px 30px;
+}
+
+#menuUl {
+  margin-top: 10px;
+}
+
+#menuUl li {
+  margin-bottom: 2.5vh;
+  list-style: none;
+  transition: 0.3s;
+}
+
+/* for title section */
+
+.section-title {
+  font-size: 0.95em;
+}
+
+/* for content section */
+
+.content-section {
+  font-size: 0.5em;
+  display: none;
+}
+
+.content {
+  background-color: #8899aa;
+  height: 15vh;
+  margin: 0 1em 1.5em 1em;
+}
+
+.content:first-child {
+  margin-top: 0;
+}
+
+.content p {
+  margin: 0 1em 2em 1em;
+}
+
+button {
+  background-color: #ddeeff;
+  margin-bottom: 3em;
+  padding: 3em;
+  border: none;
+  font-size: 0.25em;
+}
