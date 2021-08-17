@@ -1,118 +1,169 @@
 class FloatingMenu extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    return (
-      <div id="floating-menu">
-        <div id="menuDiv">
-          <img id="menu-exit" src="image/crossIcon.svg" />
-          <ul id="menuUl">
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-          </ul>
+    if (this.props.isfloatingMenu) {
+      return (
+        <div id="floating-menu" style={{ width: "50vw" }}>
+          <div id="menuDiv">
+            <img
+              id="menu-exit"
+              src="image/crossIcon.svg"
+              onClick={() => this.props.ToggleFloatingMenu()}
+            />
+            <ul id="menuUl">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
         </div>
-      </div>
-    );
-  }
-}
-
-class Container extends React.Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Main />
-      </div>
-    );
-  }
-}
-
-class Header extends React.Component {
-  render() {
-    return (
-      <header>
-        <nav class="heading">
-          <p>Welcome Title/Logo</p>
-          <ul class="nav-items">
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-          </ul>
-          <img src="image/menu-icon.svg" alt="menu icon" />
-        </nav>
-      </header>
-    );
-  }
-}
-
-class Main extends React.Component {
-  render() {
-    return (
-      <main>
-        <WelcomMessage />
-        <SectionTitle />
-        <ContentSection />
-        <Button />
-        <ContentSection />
-      </main>
-    );
-  }
-}
-
-class WelcomMessage extends React.Component {
-  render() {
-    return (
-      <section class="welcome-message">
-        <h1>Welcome Message</h1>
-      </section>
-    );
-  }
-}
-
-class SectionTitle extends React.Component {
-  render() {
-    return (
-      <section class="section-title">
-        <h2>Section Title</h2>
-      </section>
-    );
-  }
-}
-
-class ContentSection extends React.Component {
-  render() {
-    return (
-      <section class="content-section">
-        <div class="content">
-          <h3>Content Box 1</h3>
+      );
+    } else {
+      return (
+        <div id="floating-menu" style={{ width: "0" }}>
+          <div id="menuDiv">
+            <img
+              id="menu-exit"
+              src="image/crossIcon.svg"
+              onClick={() => this.props.ToggleFloatingMenu()}
+            />
+            <ul id="menuUl">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
         </div>
-        <div class="content">
-          <h3>Content Box 2</h3>
-        </div>
-        <div class="content">
-          <h3>Content Box 3</h3>
-        </div>
-        <div class="content">
-          <h3>Content Box 4</h3>
-        </div>
-      </section>
-    );
+      );
+    }
   }
 }
 
-class Button extends React.Component {
-  render() {
-    return <button class="call-to-action">Call to Action</button>;
-  }
-}
+const Container = (props) => (
+  <div>
+    <Header
+      isfloatingMenu={props.isfloatingMenu}
+      ToggleFloatingMenu={props.ToggleFloatingMenu}
+    />
+    <Main
+      sayHi={props.sayHi}
+      toggle={props.toggle}
+      handleToggle={props.handleToggle}
+      ToggleText={props.ToggleText}
+    />
+  </div>
+);
 
+const Header = (props) => (
+  <header>
+    <nav className="heading">
+      <p>Welcome Title/Logo</p>
+      <ul className="nav-items">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+      <img
+        src="image/menu-icon.svg"
+        alt="menu icon"
+        onClick={() => props.ToggleFloatingMenu()}
+      />
+    </nav>
+  </header>
+);
+
+const Main = (props) => (
+  <main>
+    <WelcomMessage sayHi={props.sayHi} ToggleText={props.ToggleText} />
+    <SectionTitle />
+    <ContentSection />
+    <Button toggle={props.toggle} handleToggle={props.handleToggle} />
+    {props.toggle ? "" : <ContentSection />}
+  </main>
+);
+
+const WelcomMessage = (props) => (
+  <section className="welcome-message">
+    <h1 onClick={() => props.ToggleText()}>
+      {props.sayHi ? "Have a Good Time!" : "Welcome Message"}
+    </h1>
+  </section>
+);
+
+const SectionTitle = (props) => (
+  <section className="section-title">
+    <h2>Section Title</h2>
+  </section>
+);
+
+const ContentSection = (props) => (
+  <section className="content-section">
+    <div className="content">
+      <h3>Content Box 1</h3>
+    </div>
+    <div className="content">
+      <h3>Content Box 2</h3>
+    </div>
+    <div className="content">
+      <h3>Content Box 3</h3>
+    </div>
+    <div className="content">
+      <h3>Content Box 4</h3>
+    </div>
+  </section>
+);
+
+const Button = (props) => (
+  <button className="call-to-action" onClick={() => props.handleToggle()}>
+    {props.toggle ? "Show Content" : "Call to Action"}
+  </button>
+);
 class App extends React.Component {
+  state = {
+    isfloatingMenu: false,
+    sayHi: false,
+    toggle: false,
+  };
+
+  handleToggle = () => {
+    this.setState({
+      toggle: !this.state.toggle,
+    });
+  };
+
+  ToggleFloatingMenu = () => {
+    this.setState({
+      isfloatingMenu: !this.state.isfloatingMenu,
+    });
+  };
+
+  ToggleText = () => {
+    this.setState({
+      sayHi: !this.state.sayHi,
+    });
+  };
+
   render() {
     return (
       <div>
-        <FloatingMenu />
-        <Container />
+        <FloatingMenu
+          isfloatingMenu={this.state.isfloatingMenu}
+          ToggleFloatingMenu={this.ToggleFloatingMenu}
+        />
+        <Container
+          isfloatingMenu={this.state.isfloatingMenu}
+          ToggleFloatingMenu={this.ToggleFloatingMenu}
+          sayHi={this.state.sayHi}
+          toggle={this.state.toggle}
+          handleToggle={this.handleToggle}
+          ToggleText={this.ToggleText}
+        />
       </div>
     );
   }

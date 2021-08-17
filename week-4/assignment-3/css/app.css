@@ -60,7 +60,7 @@ ul.nav-items {
 
 #floating-menu {
   height: 100%;
-  width: 0;
+  width: 0vw;
   position: absolute;
   z-index: 1;
   right: 0;
