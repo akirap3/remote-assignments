@@ -8,25 +8,20 @@
   background-size: cover;
 }
 
-#my-list {
+#my-card {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30vw;
-  min-width: 15rem;
 }
 
 @media only screen and (min-width: 576px) {
   h1 {
     margin-top: 3rem;
   }
-  #my-list {
-    margin-top: 2rem;
+  #my-card {
+    margin-top: 3rem;
   }
 }
 @media only screen and (max-width: 576px) {
-  #my-list {
-    margin-top: 2rem;
-    left: 35%;
+  #my-card {
+    margin-top: 1rem;
   }
 }
