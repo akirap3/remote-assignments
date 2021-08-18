@@ -1,7 +1,5 @@
-var worker = new Worker("js/worker.js");
-
-function myResult2(result) {
-  alert(result);
+function myResult1(result) {
+  console.log(result);
 }
 
 function delayedResult(n1, n2, delayTime, myFunc) {
@@ -11,4 +9,4 @@ function delayedResult(n1, n2, delayTime, myFunc) {
   }, delayTime);
 }
 
-delayedResult(-5, 10, 2000, myResult2);
+delayedResult(4, 5, 3000, myResult1);
