@@ -4,43 +4,26 @@ class FloatingMenu extends React.Component {
   }
 
   render() {
-    if (this.props.isfloatingMenu) {
-      return (
-        <div id="floating-menu" style={{ width: "50vw" }}>
-          <div id="menuDiv">
-            <img
-              id="menu-exit"
-              src="image/crossIcon.svg"
-              onClick={() => this.props.ToggleFloatingMenu()}
-            />
-            <ul id="menuUl">
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
-              <li>Item 4</li>
-            </ul>
-          </div>
+    return (
+      <div
+        id="floating-menu"
+        style={{ width: this.props.isfloatingMenu ? "50vw" : "0" }}
+      >
+        <div id="menuDiv">
+          <img
+            id="menu-exit"
+            src="image/crossIcon.svg"
+            onClick={() => this.props.ToggleFloatingMenu()}
+          />
+          <ul id="menuUl">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+          </ul>
         </div>
-      );
-    } else {
-      return (
-        <div id="floating-menu" style={{ width: "0" }}>
-          <div id="menuDiv">
-            <img
-              id="menu-exit"
-              src="image/crossIcon.svg"
-              onClick={() => this.props.ToggleFloatingMenu()}
-            />
-            <ul id="menuUl">
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
-              <li>Item 4</li>
-            </ul>
-          </div>
-        </div>
-      );
-    }
+      </div>
+    );
   }
 }
 
@@ -84,7 +67,7 @@ const Main = (props) => (
     <SectionTitle />
     <ContentSection />
     <Button toggle={props.toggle} handleToggle={props.handleToggle} />
-    {props.toggle ? "" : <ContentSection />}
+    {props.toggle && <ContentSection />}
   </main>
 );
 
@@ -102,22 +85,17 @@ const SectionTitle = (props) => (
   </section>
 );
 
-const ContentSection = (props) => (
-  <section className="content-section">
+const ContentSection = (props) => {
+  const arr = Array(4)
+    .fill()
+    .map((x, i) => i + 1);
+  const content = arr.map((number) => (
     <div className="content">
-      <h3>Content Box 1</h3>
+      <h3>Content Box {number}</h3>
     </div>
-    <div className="content">
-      <h3>Content Box 2</h3>
-    </div>
-    <div className="content">
-      <h3>Content Box 3</h3>
-    </div>
-    <div className="content">
-      <h3>Content Box 4</h3>
-    </div>
-  </section>
-);
+  ));
+  return <section className="content-section">{content}</section>;
+};
 
 const Button = (props) => (
   <button className="call-to-action" onClick={() => props.handleToggle()}>
