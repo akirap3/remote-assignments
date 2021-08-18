@@ -90,7 +90,7 @@ const ContentSection = (props) => {
     .fill()
     .map((x, i) => i + 1);
   const content = arr.map((number) => (
-    <div className="content">
+    <div key={Math.random() * 100 + number} className="content">
       <h3>Content Box {number}</h3>
     </div>
   ));
