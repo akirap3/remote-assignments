@@ -67,7 +67,7 @@ const Main = (props) => (
     <SectionTitle />
     <ContentSection />
     <Button toggle={props.toggle} handleToggle={props.handleToggle} />
-    {props.toggle && <ContentSection />}
+    {!props.toggle && <ContentSection />}
   </main>
 );
 
