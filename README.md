@@ -71,3 +71,7 @@
 ## [9. Remote Week-4 Assignment-3](https://akirap3.github.io/remote-assignments/week-4/assignment-3/refactoring-with-react.html)
 
 - Refactoring the web page of Week-1 and Week-2 via React
+
+## [10. Remote Week-4 Assignment-3-1](https://akirap3.github.io/assignment-3-with-react-app)
+
+- Refactoring the web page of Week-4 Assignment-3 with create-react-app, and publish this React App on Github Pages. You can refer to [the repo which hosts the site's codes.](https://github.com/akirap3/assignment-3-with-react-app)
