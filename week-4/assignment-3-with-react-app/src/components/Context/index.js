@@ -11,20 +11,26 @@ export class Provider extends Component {
   };
 
   handleToggle = () => {
-    this.setState({
-      toggle: !this.state.toggle,
+    this.setState((prevState) => {
+      return {
+        toggle: !prevState.toggle,
+      };
     });
   };
 
   ToggleFloatingMenu = () => {
-    this.setState({
-      isfloatingMenu: !this.state.isfloatingMenu,
+    this.setState((prevState) => {
+      return {
+        isfloatingMenu: !prevState.isfloatingMenu,
+      };
     });
   };
 
   ToggleText = () => {
-    this.setState({
-      sayHi: !this.state.sayHi,
+    this.setState((prevState) => {
+      return {
+        sayHi: !prevState.sayHi,
+      };
     });
   };
 
