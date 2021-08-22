@@ -3,11 +3,11 @@ import Header from "./Header";
 import Main from "./Main/Main";
 
 const Container = (props) => {
-  const { ToggleFloatingMenu, sayHi, toggle, handleToggle, ToggleText } = props;
+  const { sayHi, toggle, handleToggle, ToggleText } = props;
 
   return (
     <div>
-      <Header ToggleFloatingMenu={ToggleFloatingMenu} />
+      <Header />
       <Main
         sayHi={sayHi}
         toggle={toggle}

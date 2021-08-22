@@ -3,17 +3,23 @@ import WelcomMessage from "./WelcomMessage";
 import SectionTitle from "./SectionTitle";
 import ContentSection from "./ContentSection";
 import Button from "./Button";
+import { Consumer } from "../../Context";
 
-const Main = (props) => {
-  const { sayHi, ToggleText, toggle, handleToggle } = props;
+const Main = () => {
   return (
-    <main>
-      <WelcomMessage sayHi={sayHi} ToggleText={ToggleText} />
-      <SectionTitle />
-      <ContentSection />
-      <Button toggle={toggle} handleToggle={handleToggle} />
-      {!toggle && <ContentSection />}
-    </main>
+    <Consumer>
+      {({ toggle }) => {
+        return (
+          <main>
+            <WelcomMessage />
+            <SectionTitle />
+            <ContentSection />
+            <Button />
+            {!toggle && <ContentSection />}
+          </main>
+        );
+      }}
+    </Consumer>
   );
 };
 

@@ -1,13 +1,19 @@
 import React from "react";
+import { Consumer } from "../../Context";
 
-const WelcomMessage = (props) => {
-  const { ToggleText, sayHi } = props;
+const WelcomMessage = () => {
   return (
-    <section className="welcome-message">
-      <h1 onClick={() => ToggleText()}>
-        {sayHi ? "Have a Good Time!" : "Welcome Message"}
-      </h1>
-    </section>
+    <Consumer>
+      {({ ToggleText, sayHi }) => {
+        return (
+          <section className="welcome-message">
+            <h1 onClick={() => ToggleText()}>
+              {sayHi ? "Have a Good Time!" : "Welcome Message"}
+            </h1>
+          </section>
+        );
+      }}
+    </Consumer>
   );
 };
 

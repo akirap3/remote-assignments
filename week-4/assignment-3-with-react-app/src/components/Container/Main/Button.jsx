@@ -1,11 +1,17 @@
 import React from "react";
+import { Consumer } from "../../Context";
 
-const Button = (props) => {
-  const { handleToggle } = props;
+const Button = () => {
   return (
-    <button className="call-to-action" onClick={() => handleToggle()}>
-      {props.toggle ? "Show Content" : "Call to Action"}
-    </button>
+    <Consumer>
+      {({ toggle, handleToggle }) => {
+        return (
+          <button className="call-to-action" onClick={() => handleToggle()}>
+            {toggle ? "Show Content" : "Call to Action"}
+          </button>
+        );
+      }}
+    </Consumer>
   );
 };
 
