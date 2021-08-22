@@ -1,4 +1,5 @@
 import React from "react";
+import crossIcon from "../assets/crossIcon.svg";
 import { Consumer } from "./Context";
 
 class FloatingMenu extends React.Component {
@@ -14,7 +15,7 @@ class FloatingMenu extends React.Component {
               <div id="menuDiv">
                 <img
                   id="menu-exit"
-                  src="image/crossIcon.svg"
+                  src={crossIcon}
                   alt="menu exit"
                   onClick={() => ToggleFloatingMenu()}
                 />

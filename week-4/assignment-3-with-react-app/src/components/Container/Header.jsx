@@ -1,4 +1,5 @@
 import React from "react";
+import menuIcon from "../../assets/menu-icon.svg";
 import { Consumer } from "../Context";
 
 const Header = () => {
@@ -16,7 +17,7 @@ const Header = () => {
                 <li>Item 4</li>
               </ul>
               <img
-                src="image/menu-icon.svg"
+                src={menuIcon}
                 alt="menu icon"
                 onClick={() => ToggleFloatingMenu()}
               />
