@@ -1,53 +1,36 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-const MYCONTEXT = React.createContext();
-export const Consumer = MYCONTEXT.Consumer;
+export const MYCONTEXT = React.createContext();
 
-export class Provider extends Component {
-  state = {
-    isfloatingMenu: false,
-    sayHi: false,
-    toggle: false,
+export const Provider = (props) => {
+  const [isfloatingMenu, setIsFloatingMenu] = useState(false);
+  const [sayHi, setSayHi] = useState(false);
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggle = () => {
+    setToggle((prevState) => !prevState);
   };
 
-  handleToggle = () => {
-    this.setState((prevState) => {
-      return {
-        toggle: !prevState.toggle,
-      };
-    });
+  const ToggleFloatingMenu = () => {
+    setIsFloatingMenu((prevState) => !prevState);
   };
 
-  ToggleFloatingMenu = () => {
-    this.setState((prevState) => {
-      return {
-        isfloatingMenu: !prevState.isfloatingMenu,
-      };
-    });
+  const ToggleText = () => {
+    setSayHi((prevState) => !prevState);
   };
 
-  ToggleText = () => {
-    this.setState((prevState) => {
-      return {
-        sayHi: !prevState.sayHi,
-      };
-    });
-  };
-
-  render() {
-    return (
-      <MYCONTEXT.Provider
-        value={{
-          isfloatingMenu: this.state.isfloatingMenu,
-          sayHi: this.state.sayHi,
-          toggle: this.state.toggle,
-          handleToggle: this.handleToggle,
-          ToggleFloatingMenu: this.ToggleFloatingMenu,
-          ToggleText: this.ToggleText,
-        }}
-      >
-        {this.props.children}
-      </MYCONTEXT.Provider>
-    );
-  }
-}
+  return (
+    <MYCONTEXT.Provider
+      value={{
+        isfloatingMenu: isfloatingMenu,
+        sayHi: sayHi,
+        toggle: toggle,
+        handleToggle: handleToggle,
+        ToggleFloatingMenu: ToggleFloatingMenu,
+        ToggleText: ToggleText,
+      }}
+    >
+      {props.children}
+    </MYCONTEXT.Provider>
+  );
+};

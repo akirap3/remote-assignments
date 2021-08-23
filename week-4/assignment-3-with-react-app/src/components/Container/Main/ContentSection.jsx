@@ -1,7 +1,7 @@
 import React from "react";
 import uuid from "react-uuid";
 
-const ContentSection = (props) => {
+const ContentSection = () => {
   const arr = Array(4)
     .fill()
     .map((x, i) => i + 1);

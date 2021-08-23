@@ -1,17 +1,12 @@
-import React from "react";
-import { Consumer } from "../../Context";
+import React, { useContext } from "react";
+import { MYCONTEXT } from "../../Context";
 
 const Button = () => {
+  const { toggle, handleToggle } = useContext(MYCONTEXT);
   return (
-    <Consumer>
-      {({ toggle, handleToggle }) => {
-        return (
-          <button className="call-to-action" onClick={() => handleToggle()}>
-            {toggle ? "Show Content" : "Call to Action"}
-          </button>
-        );
-      }}
-    </Consumer>
+    <button className="call-to-action" onClick={() => handleToggle()}>
+      {toggle ? "Show Content" : "Call to Action"}
+    </button>
   );
 };
 

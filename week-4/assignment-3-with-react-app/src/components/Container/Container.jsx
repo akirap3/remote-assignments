@@ -2,18 +2,11 @@ import React from "react";
 import Header from "./Header";
 import Main from "./Main/Main";
 
-const Container = (props) => {
-  const { sayHi, toggle, handleToggle, ToggleText } = props;
-
+const Container = () => {
   return (
     <div>
       <Header />
-      <Main
-        sayHi={sayHi}
-        toggle={toggle}
-        handleToggle={handleToggle}
-        ToggleText={ToggleText}
-      />
+      <Main />
     </div>
   );
 };
