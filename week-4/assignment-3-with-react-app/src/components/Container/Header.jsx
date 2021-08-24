@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import menuIcon from "../../assets/menu-icon.svg";
-import { MYCONTEXT } from "../Context";
+import { MyContext } from "../Context";
 
 const Header = () => {
-  const { ToggleFloatingMenu } = useContext(MYCONTEXT);
+  const { ToggleFloatingMenu } = useContext(MyContext);
   return (
     <header>
       <nav className="heading">

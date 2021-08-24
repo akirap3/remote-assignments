@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import crossIcon from "../assets/crossIcon.svg";
-import { MYCONTEXT } from "./Context";
+import { MyContext } from "./Context";
 
 const FloatingMenu = () => {
-  const { isfloatingMenu, ToggleFloatingMenu } = useContext(MYCONTEXT);
+  const { isfloatingMenu, ToggleFloatingMenu } = useContext(MyContext);
 
   return (
     <div id="floating-menu" style={{ width: isfloatingMenu ? "50vw" : "0" }}>

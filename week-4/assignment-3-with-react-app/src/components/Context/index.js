@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const MYCONTEXT = React.createContext();
+export const MyContext = React.createContext();
 
 export const Provider = (props) => {
   const [isfloatingMenu, setIsFloatingMenu] = useState(false);
@@ -20,7 +20,7 @@ export const Provider = (props) => {
   };
 
   return (
-    <MYCONTEXT.Provider
+    <MyContext.Provider
       value={{
         isfloatingMenu: isfloatingMenu,
         sayHi: sayHi,
@@ -31,6 +31,6 @@ export const Provider = (props) => {
       }}
     >
       {props.children}
-    </MYCONTEXT.Provider>
+    </MyContext.Provider>
   );
 };

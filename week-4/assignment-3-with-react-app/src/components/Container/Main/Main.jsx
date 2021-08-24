@@ -3,10 +3,10 @@ import WelcomMessage from "./WelcomMessage";
 import SectionTitle from "./SectionTitle";
 import ContentSection from "./ContentSection";
 import Button from "./Button";
-import { MYCONTEXT } from "../../Context";
+import { MyContext } from "../../Context";
 
 const Main = () => {
-  const { toggle } = useContext(MYCONTEXT);
+  const { toggle } = useContext(MyContext);
   return (
     <main>
       <WelcomMessage />

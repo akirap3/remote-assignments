@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { MYCONTEXT } from "../../Context";
+import { MyContext } from "../../Context";
 
 const WelcomMessage = () => {
-  const { sayHi, ToggleText } = useContext(MYCONTEXT);
+  const { sayHi, ToggleText } = useContext(MyContext);
   return (
     <section className="welcome-message">
       <h1 onClick={() => ToggleText()}>
